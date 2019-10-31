@@ -1,18 +1,18 @@
 import React from 'react'
-import JurosTotalCardContent from './JurosTotalCardContent'
+import App from '../App'
 
-class JurosTotalView extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-	render() {
+const JurosTotalView = (props) => {
 		return (
 			<div class="dash-view">
 				<h2 class="view-heading">Juros total do emprestimo</h2>
-				<JurosTotalCardContent />
+    			<div class="dash-card">
+      			<div id="stats-container">
+	  			<h5 class="lg-nmbr">{App.totalAmountInTaxes}</h5>
+	  </div>
+    </div>
 			</div>
 		);
 	}
-}
+
 
 export default JurosTotalView

@@ -6,9 +6,6 @@ var username = "Luis Fellipe";
 var usertitle = "Cliente";
 
 class Sidebar extends React.Component {
-	constructor(props) {
-		super(props);
-	}
 	setView(view) {
 		this.props.setView(view);
 		console.log("level 2 " + view);

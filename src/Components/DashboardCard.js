@@ -1,42 +1,22 @@
-import React from 'react'
-import EmprestimoTotalCardContent from './EmprestimoTotalCardContent'
-import OverviewCardContent from './OverviewCardContent'
-import JurosTotalCardContent from './JurosTotalCardContent'
-import TotalPagoCardContent from './TotalPagoCardContent'
-import ParcelasEmprestimoCardContent from './ParcelasEmprestimoCardContent'
+import React, {useState} from 'react'
+import Overview from './Overview'
+import EmprestimoTotalView from './EmprestimoTotalView'
+import JurosTotalView from './JurosTotalView'
+import TotalPagoView from './TotalPagoView'
+import ParcelasEmprestimo from './ParcelasEmprestimoView'
+import '../App.css';
 
-var currentView = "overview"
-
-class DashboardCard extends React.Component {
-	render() {
-		switch(currentView) {
-			case "overview":
-		return( 
-		<div class="dash-card"> 
-			<OverviewCardContent />
-		</div>)
-				case "emprestimototal":
-		return( 
-		<div class="dash-card"> 
-			<EmprestimoTotalCardContent />
-		</div>)
-		case "jurostotal":
-		return( 
-		<div class="dash-card"> 
-			<JurosTotalCardContent />
-		</div>)
-				case "totalpago":
-		return( 
-		<div class="dash-card"> 
-			<TotalPagoCardContent />
-		</div>)
-		return(
-			<div class="dash-card">
-				<ParcelasEmprestimoCardContent />
-			</div>
+const DashboardCard = (props) => {
+	const [view, setView] = useState('overview')
+	return (
+		<div id="dashboard">
+		{view === "overview" &&  <Overview/>}
+		{view === "overview" && <EmprestimoTotalView />}
+		{view === "overview" && <JurosTotalView/>}
+		{view === "overview" && <TotalPagoView />}
+		{view === "overview" && <ParcelasEmprestimo />}
+	</div>
 		)
-		}
-		}
 	}
 
 export default DashboardCard

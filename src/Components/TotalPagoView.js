@@ -1,5 +1,5 @@
 import React from 'react'
-import TotalPagoCardContent from './TotalPagoCardContent'
+import App from '../App'
 
 class TotalPagoView extends React.Component {
 	constructor(props) {
@@ -9,7 +9,14 @@ class TotalPagoView extends React.Component {
 		return (
 			<div class="dash-view">
 				<h2 class="view-heading">Total da divida pago</h2>
-				<TotalPagoCardContent />
+				<div class="dash-card">
+      <div id="stats-container">
+		  <div>
+      <h5 class="lg-nmbr">R${App.amountPayd}</h5>
+	  <p>Já foi pago</p>
+	  </div>
+      </div>
+    </div>
 			</div>
 		);
 	}
