@@ -13,7 +13,7 @@ const Overview = () => {
           <div id="stats-container">
             <div>
               <h5 class="lg-nmbr">R${apiData.totalAmountInTaxes}</h5>
-              <p>Juros esse mês</p>
+              <p>Juros Total</p>
             </div>
             <div>
               <h5 class="lg-nmbr">R${apiData.amountPayd}</h5>
