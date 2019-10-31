@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 class UserProfileView extends React.Component {
   render() {
@@ -12,8 +12,8 @@ class UserProfileView extends React.Component {
         <h3 id="display-name">{this.props.username}</h3>
         <p class="subtitle">{this.props.usertitle}</p>
       </div>
-    )
+    );
   }
 }
 
-export default UserProfileView
+export default UserProfileView;

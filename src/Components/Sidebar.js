@@ -17,9 +17,9 @@ class Sidebar extends React.Component {
         <SidebarMenu
           item1={"Overview"}
           item2={"Empréstimo Total"}
-          item3={"Juros Total"}
+          item3={"Juros Mensal"}
           item4={"Total Pago"}
-          item5={"Todas parcelas do emprestimo"}
+          item5={"Total da parcela do emprestimo"}
           item6={"Taxa de juros mensal"}
           setView={this.props.setView}
         />
